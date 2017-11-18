@@ -1,4 +1,7 @@
+package ch.ge.thhofer.ctf.crypto
+
 import java.math.BigInteger
+import java.util.*
 
 class CyclicGroup(val p: BigInteger, val g: BigInteger) {
     fun members(): Set<BigInteger> {
