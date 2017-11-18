@@ -1,7 +1,7 @@
 import java.math.BigInteger
 
 class CyclicGroup(val p: BigInteger, val g: BigInteger) {
-    fun members(): List<BigInteger> {
+    fun members(): Set<BigInteger> {
         val valuesFound: MutableSet<BigInteger> = HashSet()
         var member: BigInteger
 
@@ -11,6 +11,6 @@ class CyclicGroup(val p: BigInteger, val g: BigInteger) {
             member = member.multiply(g).mod(p)
         }
 
-        return valuesFound.toList()
+        return valuesFound
     }
 }
